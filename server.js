@@ -1,12 +1,24 @@
-var express = require('express');
+var express = require('express'); //express required for handling webserver
 var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/i', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+app.get('/article-one',function(req, res){
+    res.send('artilce one pe pohoch gye...!');
+});
+
+app.get('/article-two',function(req, res){
+    res.send('artilce two pe pohoch gye...!');
+});
+
+app.get('/article-three',function(req, res){
+    res.send('artilce three pe pohoch gye...!');
 });
 
 app.get('/ui/style.css', function (req, res) {
