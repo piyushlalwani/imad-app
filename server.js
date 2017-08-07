@@ -36,7 +36,7 @@ var htmlTemplate = `
         <title>${title}</title>
     </head>    
     <body>
-        <h1>${tile}</h1>
+        <h1>${title}</h1>
         <p>
             This is ${title}
             Date: ${date}
